@@ -23,7 +23,7 @@ func main() {
 	// Echo instance
 	e := echo.New()
 	// e.AutoTLSManager.HostPolicy = autocert.HostWhitelist("mfarstad.com")
-	e.Pre(middleware.HTTPSWWWRedirect())
+	e.Pre(middleware.HTTPSNonWWWRedirect())
 	// e.AutoTLSManager.Cache = autocert.DirCache("/var/www/.cache")
 	e.Use(middleware.Recover())
 	e.Use(middleware.Logger())
