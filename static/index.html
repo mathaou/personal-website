@@ -1,0 +1,137 @@
+{{define "index.html"}}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Matt Farstad</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <meta property="og:title" content="Matt Farstad" />
+    <meta property="og:description" content="IOT and Desktop Applications Developer" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="static/images/piano.png">
+
+    <link rel="stylesheet" href="static/css/main.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{{/*    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">*/}}
+
+    <style>
+        :root{--site-background : url(https://winona.shrm.org/sites/winona.shrm.org/files/Visit-Winona-Summer-Scenery-1.jpg)}
+    </style>
+</head>
+
+<body class="is-preload">
+<div id="wrapper">
+    <header id="header">
+        <div class="logo">
+            <a href="/"><i class="fa fa-microchip" style="color: white;"></i></a>
+        </div>
+        <div class="content">
+            <div class="inner">
+                <h1>Matt Farstad</h1>
+                <p style="font-size: large;color: white;">
+                    Software Developer
+                </p>
+                <p style="font-size: medium;color: white;">
+                    Embedded Systems | Desktop Applications | IOT
+                </p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about" style="color: white;">Experience</a></li>
+                <li><a href="#projects" style="color: white;">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="main">
+        <article id="about">
+            <h2 class="major">Experience</h2>
+            <section class="timeline">
+                <ul>
+                    <li>
+                        <div>
+                            <time><strong>2016-2020</strong></time>
+                            <span style="display: block">Winona State University</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <time><strong>2019-2020</strong></time>
+                            <span style="display: block">Semireg Industries, LLC.</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <time><strong>2020 - Present</strong></time>
+                            <span style="display: block">Fastenal Company</span>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+{{/*            each of these needs its own paragraph*/}}
+            <h4>Fastenal Company</h4>
+            <h5 style="letter-spacing: 2px">C#, Go, UWP, ODBC, Python, ASP.NET, .NET Realm, Entity Framework</h5>
+            <h6 style="letter-spacing: 2px">Azure, Postman, Mulesoft, Git</h6>
+            <ul>
+                <li>Rebuilt customer file generation software for the Fastenal Product Locator as a <strong>REST API hosted in Mulesoft</strong>, <strong>shortening generation times from
+                        13 minutes to 2 minutes</strong>.</li>
+                <li>Expanded <strong>support</strong> for Product Locator Kiosk software from <strong>4 devices to 80+</strong>.</li>
+                <li>Created fake customer generation software using <strong>Go</strong> to streamline the implementation of new features and to <strong>drastically increase testing capabilities</strong>.</li>
+            </ul>
+            <h4>Semireg Industries, LLC.</h4>
+            <h5 style="letter-spacing: 2px">Node.js, Javascript, Python, MQTT, Redis</h5>
+            <h6 style="letter-spacing: 2px">Azure, Majaro Linux, Node Red, React Native, Git</h6>
+            <ul>
+                <li>Created <strong>label printer emulation software with Python, saving thousands of dollars</strong> in the long term by eliminating
+                    the need for buying new label printers when adding support for different models.</li>
+                <li>Created a <strong>standalone speech-to-text solution using deepspeech, a STT machine learning model</strong>.</li>
+                <li>Confidential IOT work involving Node.js, Azure, and Redis.</li>
+                <li>Developed POC <strong>React Native</strong> mobile app for industrial client.</li>
+            </ul>
+            <h4>Winona State Software Testing and Development Lab</h4>
+            <h5 style="letter-spacing: 2px">C#, Python, C, Node.js, Javascript</h5>
+            <h6 style="letter-spacing: 2px">Test Studio, TFS, Git</h6>
+            <ul>
+                <li><strong>Shortened</strong> unit testing life cycles <strong>from 2 weeks to 3 days</strong> by creating
+                    a modular and extensible library of helper methods and using <strong>Test Driven Development</strong>.</li>
+                <li>Cross compiled <strong>Python</strong> libraries written in <strong>C</strong> from x86 to MIPS Linux.</li>
+                <li>Prototyped <strong>React Native</strong> mobile apps to supplement proprietary device management application.</li>
+            </ul>
+            <hr>
+            <p><a href="https://creativecommons.org/licenses/by/3.0/" target="_blank"><i class="fab fa-creative-commons"></i></a> <strong><script>document.write(new Date().getFullYear())</script></strong>    Matthew Farstad</p>
+        </article>
+        <article id="projects">
+            <div class="row">
+                <div class="col-sm-12 col-md-5" style="flex-direction: column">
+                    <h4 class="music">Music</h4>
+                    <iframe src="https://open.spotify.com/embed/album/38ZEWJOR5OFieYB290tgq5" width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                </div>
+                <div class="col-md-2 col-sm-0">&nbsp;</div>
+                <div class="col-sm-12 col-md-5" style="flex-direction: column;margin-top: 1rem">
+                    <h4 class="music">Published Applications</h4>
+                    <h6 style="margin-top: 3rem;text-align: center;">Coming Early 2022!</h6>
+                </div>
+            </div>
+{{/*            <span class="image main"><img src="" alt="" /></span>*/}}
+        </article>
+    </div>
+    <footer id="footer">
+        <p class="copyright">
+        <div class="logo">
+            <a href="https://www.linkedin.com/in/matthewfarstad" target="_blank"><i style="color: white;" class ="fab fa-linkedin"></i></a>
+            |
+            <a href="mailto:matthewwilliamfarstad.com"><i style="color: white;" class="fa fa-envelope"></i></a>
+            |
+            <a href="https://github.com/mathaou"><i style="color: white;" class="fa fa-github"></i></a>
+        </div>
+        </p>
+    </footer>
+</div>
+<div id="bg"></div>
+</body>
+<script src="static/js/jquery.min.js"></script>
+<script src="static/js/scripts.js"></script>
+</html>
+{{end}}
