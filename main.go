@@ -3,7 +3,7 @@ package main
 import (
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
-	"golang.org/x/crypto/acme/autocert"
+	// "golang.org/x/crypto/acme/autocert"
 	"html/template"
 	"io"
 	"net/http"
@@ -22,9 +22,9 @@ func (t *TemplateRegistry) Render(w io.Writer, name string, data interface{}, c 
 func main() {
 	// Echo instance
 	e := echo.New()
-	e.AutoTLSManager.HostPolicy = autocert.HostWhitelist("mfarstad.com")
+	// e.AutoTLSManager.HostPolicy = autocert.HostWhitelist("mfarstad.com")
 	e.Pre(middleware.HTTPSWWWRedirect())
-	e.AutoTLSManager.Cache = autocert.DirCache("/var/www/.cache")
+	// e.AutoTLSManager.Cache = autocert.DirCache("/var/www/.cache")
 	e.Use(middleware.Recover())
 	e.Use(middleware.Logger())
 
@@ -41,5 +41,5 @@ func main() {
 	})
 
 	// Start the Echo server
-	e.Logger.Fatal(e.StartAutoTLS(":443"))
+	e.Logger.Fatal(e.StartTLS(":443", "/etc/letsencrypt/live/mfarstad.com/cert.pem", "/etc/letsencrypt/live/mfarstad.com/privkey.pem"))
 }
