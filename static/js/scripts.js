@@ -548,4 +548,4 @@ function callbackFunc() {
         }
     }
 }
-window.addEventListener("mousewheel", callbackFunc);
+window.addEventListener("scroll", callbackFunc);

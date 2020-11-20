@@ -1,0 +1,6 @@
+go
+snap
+website
+*.sh
+.bash_history
+.cache
