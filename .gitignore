@@ -4,3 +4,4 @@ website
 *.sh
 .bash_history
 .cache
+.idea/
