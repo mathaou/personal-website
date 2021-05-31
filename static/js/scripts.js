@@ -306,36 +306,36 @@ let browser = function() {
             });
             return $this
         };
-        // $.prioritize = function($elements, condition) {
-        //     let key = '__prioritize';
-        //     if (typeof $elements != 'jQuery') {
-        //         $elements = $($elements)
-        //     }
-        //     $elements.each(function() {
-        //         let $e = $(this), $p, $parent = $e.parent();
-        //         if ($parent.length == 0) {
-        //             return
-        //         }
-        //         if (!$e.data(key)) {
-        //             if (!condition) {
-        //                 return
-        //             }
-        //             $p = $e.prev();
-        //             if ($p.length == 0) {
-        //                 return
-        //             }
-        //             $e.prependTo($parent);
-        //             $e.data(key, $p)
-        //         } else {
-        //             if (condition) {
-        //                 return
-        //             }
-        //             $p = $e.data(key);
-        //             $e.insertAfter($p);
-        //             $e.removeData(key)
-        //         }
-        //     })
-        // }
+        $.prioritize = function($elements, condition) {
+            let key = '__prioritize';
+            if (typeof $elements != 'jQuery') {
+                $elements = $($elements)
+            }
+            $elements.each(function() {
+                let $e = $(this), $p, $parent = $e.parent();
+                if ($parent.length == 0) {
+                    return
+                }
+                if (!$e.data(key)) {
+                    if (!condition) {
+                        return
+                    }
+                    $p = $e.prev();
+                    if ($p.length == 0) {
+                        return
+                    }
+                    $e.prependTo($parent);
+                    $e.data(key, $p)
+                } else {
+                    if (condition) {
+                        return
+                    }
+                    $p = $e.data(key);
+                    $e.insertAfter($p);
+                    $e.removeData(key)
+                }
+            })
+        }
     }
 )(jQuery);
 

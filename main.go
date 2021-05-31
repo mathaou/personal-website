@@ -22,7 +22,7 @@ func (t *TemplateRegistry) Render(w io.Writer, name string, data interface{}, c 
 }
 
 func main() {
-	debug := false
+	debug := true
 	// Echo instance
 	e := echo.New()
 	e.Use(middleware.Gzip())
