@@ -22,7 +22,7 @@ func (t *TemplateRegistry) Render(w io.Writer, name string, data interface{}, c 
 }
 
 func main() {
-	debug := true
+	debug := false
 	// Echo instance
 	e := echo.New()
 	e.Use(middleware.Gzip())
@@ -37,7 +37,7 @@ func main() {
 	e.Use(middleware.Logger())
 
 	// Instantiate a template registry and register all html files inside the view folder
-	e.Renderer = &TemplateRegistry {
+	e.Renderer = &TemplateRegistry{
 		templates: template.Must(template.ParseGlob("static/*.html")),
 	}
 
